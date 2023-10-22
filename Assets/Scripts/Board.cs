@@ -6,8 +6,19 @@ using UnityEngine;
 public class Board : MonoBehaviour
 {
     [SerializeField] private Transform _initialTransform;
+    [SerializeField] private List<Snake> _snakes;
+    [SerializeField] private List<Ladder> _ladders;
 
     Vector2[] _tilePositions = new Vector2[100];
+
+    public List<Snake> GetSnakes()
+    {
+        return _snakes;
+    }
+    public List<Ladder> GetLadders()
+    {
+        return _ladders;
+    }
  
     public Vector2[] GetTilePositions()
     {
